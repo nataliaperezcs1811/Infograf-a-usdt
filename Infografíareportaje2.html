@@ -1,0 +1,2151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standard & Poor's califica de débil a Tether mientras Fitch y Moody's guardan silencio</title>
+    <meta name="description" content="S&P rebaja calificación de USDT al nivel 5 por riesgo en reservas de Bitcoin, mientras otras agencias no emiten alertas similares.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --color-1: #FFF1D6;
+            --color-2: #B0151D;
+            --color-3: #05283C;
+            --color-4: #E50E1E;
+            --color-5: #B7B1A3;
+            
+            --blanco: #ffffff;
+            --texto-principal: #05283C;
+            --texto-secundario: #3A4A5C;
+            --texto-terciario: #5D6C7D;
+            
+            --rojo-alerta: #E50E1E;
+            --rojo-fondo: rgba(176, 21, 29, 0.9);
+            --verde-colchon: #2E8B57;
+            --verde-fondo: rgba(46, 139, 87, 0.9);
+            --azul-acento: #1A5F7A;
+            --azul-fondo: rgba(26, 95, 122, 0.9);
+            --amarillo-destacado: #D4A017;
+            --amarillo-fondo: rgba(212, 160, 23, 0.9);
+            
+            --sombra-suave: 0 4px 6px -1px rgba(5, 40, 60, 0.1);
+            --sombra-media: 0 10px 15px -3px rgba(5, 40, 60, 0.15);
+            --sombra-fuerte: 0 20px 25px -5px rgba(5, 40, 60, 0.2);
+            --radio-borde: 12px;
+            --transicion-rapida: 0.3s ease;
+            
+            --twitter-azul: #1DA1F2;
+            --instagram-rosa: #E4405F;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--texto-principal);
+            background: var(--blanco);
+            overflow-x: hidden;
+        }
+
+        .contenedor {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* CABECERA */
+        .cabecera {
+            background: linear-gradient(135deg, var(--color-3) 0%, #0A3A5A 100%);
+            color: var(--blanco);
+            padding: 60px 0 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cabecera::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--color-4), var(--amarillo-destacado), var(--verde-colchon));
+            z-index: 1;
+        }
+
+        .titulo-principal {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.1;
+            text-align: center;
+            margin-bottom: 1.2rem;
+            letter-spacing: -0.5px;
+        }
+
+        @media (max-width: 768px) {
+            .titulo-principal {
+                font-size: 2.2rem;
+            }
+        }
+
+        .subtitulo {
+            font-size: 1.4rem;
+            text-align: center;
+            color: rgba(255, 241, 214, 0.95);
+            max-width: 900px;
+            margin: 0 auto 2rem;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: var(--radio-borde);
+            min-width: 130px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .meta-valor {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 0.3rem;
+        }
+
+        .meta-desc {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        /* RESUMEN */
+        .resumen {
+            padding: 3rem 0 2rem;
+            background: var(--blanco);
+        }
+
+        .resumen-contenido {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--texto-principal);
+        }
+
+        /* IMAGEN DESTACADA */
+        .imagen-destacada {
+            max-width: 900px;
+            margin: 0 auto 3rem;
+            border-radius: var(--radio-borde);
+            overflow: hidden;
+            box-shadow: var(--sombra-media);
+        }
+
+        .imagen-destacada img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .pie-foto {
+            background: #f5f5f5;
+            padding: 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* LEAD */
+        .lead {
+            background: var(--azul-fondo);
+            padding: 2.5rem;
+            border-radius: var(--radio-borde);
+            margin: 0 auto 3rem;
+            max-width: 900px;
+            border-left: 4px solid var(--azul-acento);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--blanco) !important;
+            box-shadow: var(--sombra-media);
+        }
+
+        .lead p, .lead strong, .lead em {
+            color: var(--blanco) !important;
+        }
+
+        /* SECCIONES */
+        .seccion {
+            padding: 60px 0;
+        }
+
+        .seccion-gris {
+            background: var(--color-1);
+        }
+
+        .seccion-blanca {
+            background: var(--blanco);
+        }
+
+        .seccion-oscura {
+            background: var(--color-3);
+            color: var(--blanco);
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1.8rem;
+            color: var(--color-3);
+        }
+
+        .seccion-oscura h2 {
+            color: var(--blanco);
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+        }
+
+        /* GRÁFICO MEJORADO - CORREGIDO EL SOLAPAMIENTO */
+        .grafico-contenedor {
+            background: var(--blanco);
+            border-radius: var(--radio-borde);
+            padding: 2.5rem;
+            margin: 2.5rem auto;
+            box-shadow: var(--sombra-media);
+            border: 1px solid rgba(183, 177, 163, 0.3);
+            max-width: 700px;
+            position: relative;
+            z-index: 1;
+        }
+
+        @media (max-width: 768px) {
+            .grafico-contenedor {
+                padding: 1.5rem;
+                margin: 2rem auto;
+            }
+        }
+
+        .grafico-titulo {
+            text-align: center;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-3);
+            font-weight: 700;
+            line-height: 1.4;
+            position: relative;
+            z-index: 10;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: var(--radio-borde);
+            box-shadow: var(--sombra-suave);
+            border: 1px solid rgba(183, 177, 163, 0.2);
+            max-width: 700px;
+            margin: 2rem auto 0;
+        }
+
+        @media (max-width: 768px) {
+            .grafico-titulo {
+                font-size: 1.1rem;
+                margin-bottom: 1.5rem;
+                padding: 1.2rem;
+            }
+        }
+
+        /* GRÁFICO CON ESPACIO HORIZONTAL MEJORADO - CORREGIDO */
+        .grafico-barras {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
+            position: relative;
+            padding-bottom: 3rem;
+            margin-bottom: 1rem;
+            min-height: 280px;
+        }
+
+        @media (min-width: 768px) {
+            .grafico-barras {
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: flex-end;
+                height: 280px;
+                gap: 3rem;
+                padding: 0 1rem;
+            }
+        }
+
+        .barra-completa {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 250px;
+            position: relative;
+            z-index: 5;
+        }
+
+        @media (min-width: 768px) {
+            .barra-completa {
+                width: 45%;
+            }
+        }
+
+        .barra-contenedor {
+            width: 100%;
+            height: 200px;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            margin-bottom: 0.5rem;
+            z-index: 3;
+        }
+
+        .barra {
+            width: 80px;
+            color: var(--blanco);
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-radius: 8px 8px 0 0;
+            position: relative;
+            overflow: hidden;
+            transition: height 1.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            z-index: 3;
+            padding-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .barra {
+                width: 70px;
+                font-size: 1rem;
+            }
+        }
+
+        .barra::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.2), transparent);
+        }
+
+        .barra-btc {
+            background: linear-gradient(to top, #8B0000, var(--color-4), #FF6B6B);
+            height: 0;
+        }
+
+        .barra-colchon {
+            background: linear-gradient(to top, #1d5d2f, var(--verde-colchon), #4CAF50);
+            height: 0;
+        }
+
+        /* ETIQUETAS SUPERIORES - CORREGIDAS PARA EVITAR SOLAPAMIENTO */
+        .barra-etiqueta-superior {
+            position: absolute;
+            top: -55px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--color-3);
+            background: rgba(255, 255, 255, 0.95);
+            padding: 5px 6px;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 11;
+            border: 1px solid rgba(183, 177, 163, 0.3);
+            line-height: 1.2;
+        }
+
+        .barra-valor {
+            position: absolute;
+            top: -30px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-weight: 800;
+            font-size: 1.6rem;
+            color: var(--color-3);
+            background: rgba(255, 255, 255, 0.98);
+            padding: 6px 4px;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+            z-index: 10;
+            border: 2px solid rgba(5, 40, 60, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .barra-valor {
+                font-size: 1.4rem;
+                top: -28px;
+                padding: 5px 3px;
+            }
+            
+            .barra-etiqueta-superior {
+                font-size: 0.85rem;
+                top: -50px;
+                padding: 4px 5px;
+            }
+        }
+
+        .barra-etiqueta {
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--texto-secundario);
+            margin-top: 0.5rem;
+            line-height: 1.3;
+            padding: 0.7rem;
+            background: rgba(5, 40, 60, 0.05);
+            border-radius: 8px;
+            width: 100%;
+            border: 1px solid rgba(183, 177, 163, 0.2);
+            position: relative;
+            z-index: 10;
+        }
+
+        @media (max-width: 768px) {
+            .barra-etiqueta {
+                font-size: 0.95rem;
+            }
+        }
+
+        .barra-detalle {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--color-5);
+            margin-top: 0.3rem;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        @media (max-width: 768px) {
+            .barra-detalle {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* LÍNEA DE REFERENCIA - CORREGIDA PARA NO SOLAPAR */
+        .linea-referencia {
+            position: absolute;
+            left: 10%;
+            right: 10%;
+            height: 3px;
+            background: var(--color-5);
+            opacity: 0.8;
+            bottom: 78px; /* Posicionada a la altura del 3.9% */
+            z-index: 2;
+        }
+
+        /* ETIQUETA DE "LÍMITE SEGURO" - CORREGIDA POSICIÓN */
+        .etiqueta-limite-seguro {
+            position: absolute;
+            right: 5%;
+            bottom: 78px; /* Misma altura que la línea */
+            transform: translateY(-50%);
+            font-size: 0.85rem;
+            color: var(--color-5);
+            font-weight: 700;
+            background: var(--blanco);
+            padding: 4px 10px;
+            border-radius: 6px;
+            border: 2px solid var(--color-5);
+            z-index: 12;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            white-space: nowrap;
+        }
+
+        @media (max-width: 768px) {
+            .etiqueta-limite-seguro {
+                font-size: 0.8rem;
+                padding: 3px 8px;
+                right: 3%;
+            }
+        }
+
+        /* ALERTA MEJORADA */
+        .alerta-grafico {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--rojo-fondo);
+            border-radius: var(--radio-borde);
+            margin-top: 2rem;
+            color: var(--blanco);
+            font-weight: 700;
+            border: 2px solid var(--rojo-alerta);
+            font-size: 1.1rem;
+            box-shadow: var(--sombra-media);
+            position: relative;
+            z-index: 10;
+        }
+
+        @media (max-width: 768px) {
+            .alerta-grafico {
+                padding: 1.2rem;
+                font-size: 1rem;
+                margin-top: 1.5rem;
+            }
+        }
+
+        .alerta-grafico i {
+            margin-right: 10px;
+            font-size: 1.3rem;
+        }
+
+        /* CUADROS MEJORADOS - CON FONDOS OSCUROS Y LETRAS BLANCAS */
+        .cuadro-interpretacion {
+            background: var(--azul-fondo);
+            padding: 2rem;
+            border-radius: var(--radio-borde);
+            margin: 2.5rem 0;
+            border-left: 5px solid var(--azul-acento);
+            box-shadow: var(--sombra-media);
+            color: var(--blanco);
+            position: relative;
+            z-index: 10;
+        }
+
+        .cuadro-interpretacion h4 {
+            color: var(--blanco);
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.3rem;
+        }
+
+        .cuadro-interpretacion p, .cuadro-interpretacion strong, .cuadro-interpretacion em {
+            color: var(--blanco) !important;
+        }
+
+        .cuadro-analogia {
+            background: var(--verde-fondo);
+            padding: 2rem;
+            border-radius: var(--radio-borde);
+            margin: 2.5rem 0;
+            border-left: 5px solid var(--verde-colchon);
+            box-shadow: var(--sombra-media);
+            color: var(--blanco);
+            position: relative;
+            z-index: 10;
+        }
+
+        .cuadro-analogia h4 {
+            color: var(--blanco);
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.3rem;
+        }
+
+        .cuadro-analogia p, .cuadro-analogia strong, .cuadro-analogia em {
+            color: var(--blanco) !important;
+        }
+
+        /* CUADRO LISTA - MEJORADO */
+        .cuadro-lista {
+            background: var(--amarillo-fondo);
+            padding: 2rem;
+            border-radius: var(--radio-borde);
+            margin: 2rem 0;
+            border-left: 5px solid var(--amarillo-destacado);
+            box-shadow: var(--sombra-media);
+            color: var(--blanco);
+            position: relative;
+            z-index: 10;
+        }
+
+        .cuadro-lista ol, .cuadro-lista li, .cuadro-lista strong {
+            color: var(--blanco) !important;
+        }
+
+        .cuadro-lista a {
+            color: var(--blanco);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .cuadro-lista a:hover {
+            text-decoration: none;
+        }
+
+        /* CUADRO DE CITAS EN SECCIÓN OSCURA */
+        .seccion-oscura .cuadro-lista {
+            background: rgba(255, 241, 214, 0.9);
+            color: var(--color-3);
+        }
+
+        .seccion-oscura .cuadro-lista ol, 
+        .seccion-oscura .cuadro-lista li, 
+        .seccion-oscura .cuadro-lista strong {
+            color: var(--color-3) !important;
+        }
+
+        .seccion-oscura .cuadro-lista a {
+            color: var(--color-3);
+        }
+
+        /* COMPARADOR MEJORADO CON ICONOS - MANTENIENDO LOS CARTUCHOS ORIGINALES */
+        .comparador {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2.5rem 0;
+            position: relative;
+            z-index: 10;
+        }
+
+        .tarjeta {
+            background: var(--blanco);
+            padding: 2rem;
+            border-radius: var(--radio-borde);
+            box-shadow: var(--sombra-media);
+            transition: all var(--transicion-rapida);
+            border-top: 5px solid transparent;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(183, 177, 163, 0.2);
+            position: relative;
+            z-index: 10;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--sombra-fuerte);
+        }
+
+        .tarjeta-sp {
+            border-top-color: var(--color-4);
+        }
+
+        .tarjeta-tether {
+            border-top-color: var(--amarillo-destacado);
+        }
+
+        .tarjeta h4 {
+            color: var(--color-3);
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.3rem;
+        }
+
+        .tarjeta h4 a {
+            color: inherit;
+            text-decoration: underline;
+            font-weight: 700;
+            text-underline-offset: 4px;
+        }
+
+        .tarjeta h4 a:hover {
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+        }
+
+        .tarjeta-sp h4 a {
+            color: var(--color-4);
+        }
+
+        .tarjeta-tether h4 a {
+            color: var(--amarillo-destacado);
+        }
+
+        .tarjeta p {
+            margin-bottom: 1.2rem;
+            flex-grow: 1;
+        }
+
+        .tarjeta ul {
+            padding-left: 1.5rem;
+            margin-top: 0.5rem;
+            flex-grow: 1;
+        }
+
+        .tarjeta li {
+            margin-bottom: 0.8rem;
+            line-height: 1.5;
+            color: var(--texto-secundario);
+        }
+
+        /* NUEVOS ESTILOS PARA ICONOS EN LAS TARJETAS */
+        .tarjeta .stat-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: var(--blanco);
+            margin-right: 10px;
+        }
+
+        .tarjeta-sp .stat-icon {
+            background: #E50E1E;
+        }
+
+        .tarjeta-tether .stat-icon {
+            background: #D4A017;
+        }
+
+        .tarjeta .stat-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            background: rgba(5, 40, 60, 0.03);
+            padding: 0.8rem;
+            border-radius: 12px;
+        }
+
+        .tarjeta .stat-content {
+            flex: 1;
+        }
+
+        .tarjeta .stat-label {
+            font-size: 0.8rem;
+            color: var(--texto-terciario);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tarjeta .stat-value {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--color-3);
+        }
+
+        /* CITAS MEJORADAS */
+        .cita {
+            font-style: italic;
+            font-size: 1.3rem;
+            padding: 2.5rem;
+            border-left: 6px solid var(--amarillo-destacado);
+            background: var(--amarillo-fondo);
+            border-radius: var(--radio-borde);
+            margin: 3rem auto;
+            max-width: 800px;
+            color: var(--blanco);
+            line-height: 1.7;
+            box-shadow: var(--sombra-media);
+            position: relative;
+            overflow: hidden;
+            z-index: 10;
+        }
+
+        .cita::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 6rem;
+            color: rgba(255, 255, 255, 0.3);
+            font-family: Georgia, serif;
+            line-height: 1;
+            z-index: 0;
+        }
+
+        .cita p, .cita em {
+            color: var(--blanco) !important;
+        }
+
+        .firma {
+            text-align: right;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid rgba(255, 255, 255, 0.3);
+            color: var(--blanco);
+            position: relative;
+            z-index: 1;
+        }
+
+        .firma a {
+            color: var(--blanco);
+            text-decoration: none;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .firma a:hover {
+            border-bottom-color: var(--blanco);
+        }
+
+        /* CARTUCHO PARA CITA IMPLÍCITA */
+        .cartucho-cita {
+            background: var(--color-1);
+            padding: 2.5rem;
+            border-radius: var(--radio-borde);
+            margin: 3rem auto;
+            max-width: 800px;
+            border-left: 6px solid var(--color-4);
+            line-height: 1.7;
+            box-shadow: var(--sombra-media);
+            position: relative;
+            overflow: hidden;
+            z-index: 10;
+            font-size: 1.1rem;
+        }
+
+        .cartucho-cita p {
+            font-style: normal;
+            margin-bottom: 1rem;
+            color: var(--texto-principal);
+        }
+
+        .cartucho-cita .fuente {
+            text-align: right;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid rgba(5, 40, 60, 0.2);
+            color: var(--texto-secundario);
+            position: relative;
+            z-index: 1;
+        }
+
+        .cartucho-cita a {
+            color: var(--color-4);
+            text-decoration: none;
+            font-weight: 700;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.3s ease;
+        }
+
+        .cartucho-cita a:hover {
+            border-bottom: 2px solid var(--color-4);
+        }
+
+        /* CONSECUENCIAS FLIP CARD */
+        .flip-cards-contenedor {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2.5rem 0;
+            position: relative;
+            z-index: 10;
+        }
+
+        .flip-card {
+            background: transparent;
+            perspective: 1000px;
+            height: 300px;
+            border-radius: var(--radio-borde);
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+            border-radius: var(--radio-borde);
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: var(--radio-borde);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: var(--sombra-media);
+            overflow: hidden;
+        }
+
+        .flip-card-front {
+            background: var(--rojo-fondo);
+            color: var(--blanco);
+            border: 2px solid var(--rojo-alerta);
+        }
+
+        .flip-card-back {
+            background: var(--azul-fondo);
+            color: var(--blanco);
+            transform: rotateY(180deg);
+            border: 2px solid var(--azul-acento);
+            text-align: center;
+            justify-content: space-between;
+        }
+
+        .flip-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--blanco);
+        }
+
+        .flip-card-front h4 {
+            color: var(--blanco);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+            text-align: center;
+        }
+
+        .flip-card-front p {
+            color: var(--blanco);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 0;
+            text-align: center;
+        }
+
+        .flip-card-back h4 {
+            color: var(--blanco);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-align: center;
+        }
+
+        .flip-card-back p {
+            color: var(--blanco);
+            font-size: 0.85rem;
+            line-height: 1.4;
+            margin-bottom: 1rem;
+            text-align: center;
+            max-width: 100%;
+            padding: 0 0.5rem;
+            white-space: normal;
+            word-wrap: break-word;
+        }
+
+        .flip-card-back .fuente {
+            text-align: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--blanco);
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            width: 100%;
+        }
+
+        .flip-card-back a {
+            color: var(--blanco);
+            text-decoration: underline;
+        }
+
+        /* CIERRE MEJORADO */
+        .cierre {
+            background: var(--azul-fondo);
+            padding: 3rem;
+            border-radius: var(--radio-borde);
+            margin: 4rem auto;
+            max-width: 900px;
+            border: 2px solid var(--azul-acento);
+            box-shadow: var(--sombra-media);
+            color: var(--blanco);
+            position: relative;
+            z-index: 10;
+        }
+
+        .cierre p, .cierre strong, .cierre em {
+            color: var(--blanco) !important;
+        }
+
+        .cierre-contenido {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .veredicto {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .veredicto-item {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: var(--radio-borde);
+            box-shadow: var(--sombra-media);
+            transition: transform var(--transicion-rapida);
+            border-top: 4px solid transparent;
+            color: var(--blanco);
+        }
+
+        .veredicto-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .veredicto-item:nth-child(1) {
+            border-top-color: var(--rojo-alerta);
+        }
+
+        .veredicto-item:nth-child(2) {
+            border-top-color: var(--verde-colchon);
+        }
+
+        .veredicto-item h4, .veredicto-item p {
+            color: var(--blanco) !important;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: linear-gradient(135deg, var(--color-3) 0%, #0A3A5A 100%);
+            color: var(--blanco);
+            padding: 4rem 0;
+            text-align: center;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .fuentes {
+            text-align: center;
+            margin-top: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 2rem;
+            border-radius: var(--radio-borde);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .fuentes ul {
+            font-size: 0.9rem;
+            color: var(--blanco);
+            line-height: 1.6;
+            margin-top: 1rem;
+            list-style-position: inside;
+            padding-left: 0;
+            text-align: left;
+        }
+
+        .fuentes li {
+            margin-bottom: 0.8rem;
+            display: inline-block;
+            width: 100%;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .fuentes li:before {
+            content: "•";
+            color: var(--amarillo-destacado);
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        .fuentes a {
+            color: var(--amarillo-destacado);
+            text-decoration: underline;
+        }
+
+        /* TEXTO JUSTIFICADO */
+        .texto-justificado {
+            text-align: justify;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* SECCIÓN DE REDES SOCIALES */
+        .redes-sociales {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9ecf0 100%);
+            padding: 4rem 0;
+            border-top: 1px solid rgba(5, 40, 60, 0.1);
+            border-bottom: 1px solid rgba(5, 40, 60, 0.1);
+        }
+
+        .redes-titulo {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: var(--color-3);
+        }
+
+        .hilo-twitter {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            background: var(--blanco);
+            border-radius: var(--radio-borde);
+            box-shadow: var(--sombra-media);
+            overflow: hidden;
+            border: 1px solid rgba(29, 161, 242, 0.2);
+        }
+
+        .tweet {
+            padding: 2rem;
+            border-bottom: 1px solid #e1e8ed;
+            transition: background 0.3s ease;
+        }
+
+        .tweet:last-child {
+            border-bottom: none;
+        }
+
+        .tweet:hover {
+            background: #f8f9fa;
+        }
+
+        .tweet-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .tweet-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--twitter-azul);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--blanco);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .tweet-user {
+            flex: 1;
+        }
+
+        .tweet-name {
+            font-weight: 700;
+            color: var(--color-3);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tweet-name i {
+            color: var(--twitter-azul);
+            font-size: 1.1rem;
+        }
+
+        .tweet-handle {
+            color: #657786;
+            font-size: 0.9rem;
+        }
+
+        .tweet-content {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--texto-principal);
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        .tweet-content a {
+            color: var(--twitter-azul);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-bottom 0.3s ease;
+        }
+
+        .tweet-content a:hover {
+            border-bottom-color: var(--twitter-azul);
+        }
+
+        .tweet-meta {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            color: #657786;
+            font-size: 0.9rem;
+            border-top: 1px solid #e1e8ed;
+            padding-top: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .tweet-meta i {
+            margin-right: 0.3rem;
+        }
+
+        .instagram-post {
+            max-width: 800px;
+            margin: 3rem auto 0;
+            background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+            border-radius: var(--radio-borde);
+            box-shadow: var(--sombra-media);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .instagram-post::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.02);
+            pointer-events: none;
+        }
+
+        .instagram-header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .instagram-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--blanco);
+            font-size: 1.5rem;
+        }
+
+        .instagram-user {
+            flex: 1;
+        }
+
+        .instagram-name {
+            font-weight: 700;
+            color: var(--color-3);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .instagram-name i {
+            color: var(--instagram-rosa);
+            font-size: 1.1rem;
+        }
+
+        .instagram-handle {
+            color: #657786;
+            font-size: 0.9rem;
+        }
+
+        .instagram-content {
+            background: var(--blanco);
+            padding: 2rem;
+        }
+
+        .instagram-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--texto-principal);
+            text-align: left;
+        }
+
+        .instagram-text p {
+            margin-bottom: 1rem;
+        }
+
+        .instagram-text ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .instagram-text li {
+            margin-bottom: 0.5rem;
+        }
+
+        .instagram-footer {
+            background: #fafafa;
+            padding: 1rem 2rem;
+            border-top: 1px solid #efefef;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            color: #657786;
+            font-size: 0.9rem;
+        }
+
+        .instagram-footer i {
+            margin-right: 0.3rem;
+            font-size: 1.2rem;
+        }
+
+        .instagram-footer i.fa-heart {
+            color: var(--instagram-rosa);
+        }
+
+        .redes-creditos {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: var(--texto-terciario);
+        }
+
+        .redes-creditos a {
+            color: var(--color-4);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .redes-creditos a:hover {
+            border-bottom-color: var(--color-4);
+        }
+
+        /* UTILIDADES */
+        .centrado {
+            text-align: center;
+        }
+
+        .negrita {
+            font-weight: 700;
+        }
+
+        .cursiva {
+            font-style: italic;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .autor {
+            text-align: center;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid rgba(5, 40, 60, 0.1);
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .autor-nombre {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--color-3);
+        }
+
+        .autor-fecha {
+            color: var(--texto-terciario);
+            font-size: 0.95rem;
+            margin-top: 0.3rem;
+        }
+        
+        /* RESUMEN EN NEGRO CON CURSIVA */
+        .resumen-negro {
+            color: #000000;
+            font-weight: normal;
+            font-style: italic;
+        }
+        
+        .resumen-negro strong {
+            color: #000000;
+            font-weight: 700;
+            font-style: italic;
+        }
+        
+        .resumen-negro a {
+            color: #000000;
+            text-decoration: none;
+        }
+        
+        /* MEJORAS PARA MÓVILES */
+        @media (max-width: 768px) {
+            .contenedor {
+                padding: 0 15px;
+            }
+            
+            .seccion {
+                padding: 40px 0;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            h3 {
+                font-size: 1.4rem;
+            }
+            
+            .meta-info {
+                gap: 0.8rem;
+            }
+            
+            .meta-item {
+                min-width: 110px;
+                padding: 0.8rem;
+            }
+            
+            .meta-valor {
+                font-size: 1.6rem;
+            }
+            
+            .lead, .cita, .cierre, .cartucho-cita {
+                padding: 1.5rem;
+                margin: 2rem auto;
+            }
+            
+            .cita {
+                font-size: 1.1rem;
+                padding: 1.8rem;
+            }
+            
+            .cita::before {
+                font-size: 4rem;
+                top: 5px;
+                left: 10px;
+            }
+            
+            .barra-contenedor {
+                height: 180px;
+            }
+            
+            .grafico-contenedor {
+                padding: 1.2rem;
+            }
+            
+            .cuadro-interpretacion, .cuadro-analogia, .cuadro-lista {
+                padding: 1.5rem;
+            }
+            
+            .flip-cards-contenedor {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .flip-card {
+                height: 280px;
+            }
+            
+            .flip-card-front, .flip-card-back {
+                padding: 1.5rem;
+            }
+            
+            .flip-icon {
+                font-size: 2.5rem;
+                margin-bottom: 0.8rem;
+            }
+            
+            .flip-card-front h4 {
+                font-size: 1.2rem;
+            }
+            
+            .flip-card-back h4 {
+                font-size: 1.1rem;
+            }
+            
+            .flip-card-back p {
+                font-size: 0.85rem;
+            }
+            
+            .tweet-header {
+                flex-wrap: wrap;
+            }
+            
+            .tweet-meta {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            
+            .comparador {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 360px) {
+            .grafico-titulo {
+                font-size: 1rem;
+            }
+            
+            .barra {
+                width: 60px;
+            }
+            
+            .barra-valor {
+                font-size: 1.3rem;
+                top: -25px;
+                padding: 4px 2px;
+            }
+            
+            .barra-etiqueta-superior {
+                font-size: 0.8rem;
+                top: -45px;
+                padding: 3px 4px;
+            }
+            
+            .barra-etiqueta {
+                font-size: 0.9rem;
+            }
+            
+            .barra-detalle {
+                font-size: 0.75rem;
+            }
+            
+            .flip-card {
+                height: 260px;
+            }
+            
+            .flip-card-front, .flip-card-back {
+                padding: 1.2rem;
+            }
+            
+            .flip-icon {
+                font-size: 2.2rem;
+            }
+            
+            .flip-card-back p {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- CABECERA -->
+    <header class="cabecera">
+        <div class="contenedor">
+            <h1 class="titulo-principal fade-in">Standard & Poor's califica de débil a Tether mientras Fitch y Moody's guardan silencio</h1>
+            
+            <p class="subtitulo fade-in">S&P rebaja calificación de USDT al nivel 5 por riesgo en reservas de Bitcoin, mientras otras agencias no emiten alertas similares</p>
+            
+            <div class="meta-info fade-in">
+                <div class="meta-item">
+                    <div class="meta-valor" style="color: #E50E1E;">5</div>
+                    <div class="meta-desc">Calificación S&P<br>"Débil" (1-10)</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-valor" style="color: #D4A017;">26/11</div>
+                    <div class="meta-desc">Noviembre 2025<br>Fecha del informe</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-valor" style="color: #2E8B57;">15M+</div>
+                    <div class="meta-desc">Usuarios en<br>Latinoamérica</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- AUTOR -->
+    <div class="autor">
+        <div class="contenedor">
+            <div class="autor-nombre">Por Natalia Pérez</div>
+            <div class="autor-fecha">Caracas, diciembre de 2025</div>
+        </div>
+    </div>
+
+    <!-- RESUMEN EN NEGRO CON CURSIVA - SIN ENLACE -->
+    <section class="resumen">
+        <div class="contenedor">
+            <div class="resumen-contenido fade-in resumen-negro">
+                <p><strong><em>Standard & Poor's rebajó la calificación de estabilidad de la stablecoin USDT al advertir riesgos en la composición de sus reservas, una evaluación que contrasta con el silencio de Moody's y Fitch. Mientras las agencias financieras debaten cómo medir los activos digitales, millones de usuarios en países con alta inflación como Venezuela siguen usando el USDT por su utilidad práctica en pagos y remesas</em></strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMAGEN DESTACADA -->
+    <div class="imagen-destacada fade-in">
+        <img src="https://i.ibb.co/spJ4GfVd/unnamed.png" alt="Análisis de calificación S&P sobre USDT - Riesgo vs Seguridad">
+        <div class="pie-foto">Análisis de S&P Global Ratings: Desajuste entre exposición al Bitcoin (5,6%) y colchón de seguridad (3,9%) - Noviembre 2025</div>
+    </div>
+
+    <!-- LEAD CON LETRAS BLANCAS - TEXTO MODIFICADO -->
+    <section class="seccion-blanca">
+        <div class="contenedor">
+            <div class="lead fade-in">
+                <p><em>El 26 de noviembre de 2025, Standard & Poor's (S&P Global Ratings) rebajó la calificación de estabilidad de la stablecoin USDT al nivel 5, considerado "débil". La agencia argumentó que Tether mantiene 5,6 % de sus reservas en Bitcoin, un activo volátil, mientras su colchón de seguridad es de solo 3,9 %. Otras agencias no han emitido alertas similares.</em></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- EL DESAJUSTE TÉCNICO - GRÁFICO CON ESPACIO HORIZONTAL MEJORADO -->
+    <section class="seccion-gris">
+        <div class="contenedor">
+            <h2 class="fade-in">El desajuste técnico: cuando el riesgo supera la protección</h2>
+            
+            <p class="fade-in">La <a href="https://coinedition.com/es/sp-rebaja-su-ancla-a-debil-mientras-bitcoin-corre-el-riesgo-de-eclipsar-el-colchon-de-seguridad/">rebaja de S&P</a> no cuestiona la liquidez actual de Tether, sino un desequilibrio estructural entre sus inversiones y su capacidad para absorber pérdidas repentinas. Según los datos de la calificadora:</p>
+            
+            <!-- TÍTULO FUERA DEL GRÁFICO - CORREGIDO -->
+            <div class="grafico-titulo fade-in">Desajuste entre exposición al riesgo y colchón de seguridad (porcentajes del total de reservas/activos)</div>
+            
+            <!-- GRÁFICO CON ESPACIO HORIZONTAL MEJORADO -->
+            <div class="grafico-contenedor fade-in">
+                <div class="grafico-barras">
+                    <div class="linea-referencia"></div>
+                    <div class="etiqueta-limite-seguro">Límite seguro</div>
+                    
+                    <!-- BARRA BITCOIN - CON MÁS ESPACIO HORIZONTAL -->
+                    <div class="barra-completa">
+                        <div class="barra-contenedor">
+                            <div class="barra-etiqueta-superior">Exposición a</div>
+                            <div class="barra-valor">5,6 %</div>
+                            <div class="barra barra-btc" id="barra-btc">5,6%</div>
+                        </div>
+                        <div class="barra-etiqueta">
+                            <em>Bitcoin</em>
+                            <span class="barra-detalle">(5,6 % del 100 % de las reservas)</span>
+                        </div>
+                    </div>
+                    
+                    <!-- BARRA COLCHÓN - CON MÁS ESPACIO HORIZONTAL -->
+                    <div class="barra-completa">
+                        <div class="barra-contenedor">
+                            <div class="barra-etiqueta-superior">Colchón de</div>
+                            <div class="barra-valor">3,9 %</div>
+                            <div class="barra barra-colchon" id="barra-colchon">3,9%</div>
+                        </div>
+                        <div class="barra-etiqueta">
+                            Seguridad
+                            <span class="barra-detalle">(3,9 % del 100 % de los activos)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="alerta-grafico">
+                    <i class="fas fa-exclamation-triangle"></i> 
+                    Diferencia crítica de <strong>1,7 puntos porcentuales</strong> por encima del límite considerado seguro
+                </div>
+            </div>
+            
+            <!-- SECCIÓN INTERPRETACIÓN CON FONDO OSCURO Y LETRAS BLANCAS -->
+            <div class="cuadro-interpretacion fade-in">
+                <h4><i class="fas fa-chart-line"></i> Interpretación</h4>
+                <p><strong>Si el precio del <em>Bitcoin</em> cayera más del 3,9 %, Tether no tendría suficiente capital excedente para cubrir las pérdidas y mantener la paridad de 1 USDT = 1 USD. El riesgo medido (5,6 %) supera la capacidad de absorción (3,9 %).</strong></p>
+            </div>
+            
+            <!-- SECCIÓN ANALOGÍA CON FONDO OSCURO Y LETRAS BLANCAS -->
+            <div class="cuadro-analogia fade-in">
+                <h4><i class="fas fa-balance-scale"></i> Analogía para entender el riesgo</h4>
+                <p>Imagine que Tether es un banco que promete devolver 1 dólar por cada depósito. Para generar ganancias, invierte parte de ese dinero en un activo volátil (como el <em>Bitcoin</em>). El problema surge cuando la cantidad invertida (5,6 %) es mayor que el "colchón" disponible para cubrir pérdidas (3,9 %). En una caída brusca, el colchón se agotaría y el banco no podría cumplir su promesa a todos los clientes simultáneamente.</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- SILENCIO DE OTRAS AGENCIAS -->
+    <section class="seccion-oscura">
+        <div class="contenedor">
+            <h2 class="fade-in">¿Por qué <em>Moody's</em> y <em>Fitch</em> no han seguido a <em>S&P</em>?</h2>
+            
+            <p class="fade-in">El silencio de las otras dos potencias de la calificación crediticia genera interrogantes. El analista de riesgos Kevin Bravo identifica tres factores clave:</p>
+            
+            <!-- CUADRO LISTA CON FONDO VISIBLE Y NUEVO ENLACE EN LEY GENIUS -->
+            <div class="cuadro-lista fade-in">
+                <ol style="padding-left: 1.5rem;">
+                    <li style="margin-bottom: 1rem;">
+                        <strong>Espera regulatoria:</strong> Las agencias prefieren observar el avance de la <strong><a href="https://financefeeds.com/es/Ley-Genius%3A-explicaci%C3%B3n-de-las-reglas-y-el-cumplimiento-de-la-ley-de-las-monedas-estables/" target="_blank" rel="noopener noreferrer">Ley Genius</a></strong> (<em>Guiar y Establecer la Innovación Nacional para las Stablecoins de Estados Unidos</em>), que exigirá un respaldo estricto 1:1 en efectivo y bonos antes de emitir un juicio definitivo.
+                    </li>
+                    <li style="margin-bottom: 1rem;">
+                        <strong>Dificultad metodológica:</strong> <em>Fitch</em> se especializa en calificar deudas concretas (bonos); evaluar una "reserva mixta" de activos volátiles como la de Tether les resulta técnicamente complejo con sus marcos actuales.
+                    </li>
+                    <li>
+                        <strong>Búsqueda de nuevos criterios:</strong> <em>Moody's</em> ya trabaja en un sistema de calificación diseñado específicamente para <em>stablecoins</em>, evitando aplicar criterios bancarios tradicionales a tecnologías disruptivas.
+                    </li>
+                </ol>
+            </div>
+            
+            <!-- CITA CON FONDO OSCURO Y LETRAS BLANCAS -->
+            <div class="cita fade-in">
+                <p>"La Ley Genius sí es un riesgo mayor; si no llegan a cumplirla, pierden todo el mercado estadounidense."</p>
+                <div class="firma">— Kevin Bravo, Analista de Riesgos</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHOQUE DE VISIONES - CON LOS CARTUCHOS ORIGINALES Y NUEVOS ICONOS -->
+    <section class="seccion-blanca">
+        <div class="contenedor">
+            <h2 class="fade-in">Choque de visiones: ¿Modelo Bancario vs Gestión Activa de Reservas?</h2>
+            
+            <p class="fade-in">La disputa central gira en torno a cómo conceptualizar una stablecoin: como un producto financiero conservador o como una herramienta disruptiva con un modelo de gestión propio. Mientras S&P evalúa stablecoins con criterios de Fondos de Mercado Monetario (alta liquidez, activos de máxima calidad), Tether opera con un modelo similar a un banco de reservas (híbrido financiero), buscando rentabilidad a través de inversiones diversificadas.</p>
+            
+            <div class="comparador fade-in">
+                <!-- VISIÓN DE STANDARD & POOR'S -->
+                <div class="tarjeta tarjeta-sp">
+                    <h4><i class="fas fa-university" style="color: #E50E1E;"></i> <a href="https://www.spglobal.com/ratings/es/about" target="_blank" rel="noopener noreferrer">Visión de Standard & Poor's (S&P)</a></h4>
+                    
+                    <div class="stat-item">
+                        <div class="stat-icon sp">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-label">Referente Metodológico</div>
+                            <div class="stat-value">Fondo de Mercado Monetario (FMM)</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-icon sp">
+                            <i class="fas fa-percent"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-label">Exigencia de Reservas</div>
+                            <div class="stat-value">100% en activos de máxima calidad</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-icon sp">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-label">Prioridad</div>
+                            <div class="stat-value">Estabilidad Absoluta</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-icon sp">
+                            <i class="fas fa-gavel"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-label">Lógica</div>
+                            <div class="stat-value">Protección al inversor institucional</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- MODELO DE TETHER -->
+                <div class="tarjeta tarjeta-tether">
+                    <h4><i class="fas fa-coins" style="color: #D4A017;"></i> <a href="https://es.cointelegraph.com/explained/what-is-tether-usdt-and-how-does-it-work" target="_blank" rel="noopener noreferrer">Modelo de Tether (USDT)</a></h4>
+                    
+                    <div class="stat-item">
+                        <div class="stat-icon tether">
+                            <i class="fas fa-cubes"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-label">Referente Metodológico</div>
+                            <div class="stat-value">Gestión Activa de Reservas</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-icon tether">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-label">Estrategia de Activos</div>
+                            <div class="stat-value">Bitcoin, Oro, Préstamos</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-icon tether">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-label">Prioridad</div>
+                            <div class="stat-value">Resiliencia y Utilidad</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-icon tether">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-label">Resultado 2024</div>
+                            <div class="stat-value">USD 13.000M en ganancias</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CITA DE PAOLO ARDOINO CON ENLACE DIRECTO A X (TWITTER) -->
+            <div class="cita fade-in">
+                <p>"Tether es prueba viva de que el sistema financiero tradicional está tan roto que empieza a ser temido por los emperadores que no tienen ropa."</p>
+                <div class="firma"><a href="https://x.com/paoloardoino/status/1993731485291913649?s=20" target="_blank" rel="noopener noreferrer">— Paolo Ardoino, CEO de Tether, en X (Twitter)</a></div>
+            </div>
+            
+            <!-- CITA CON FONDO OSCURO Y LETRAS BLANCAS -->
+            <div class="cita fade-in">
+                <p>"No se puede evaluar a <em>Bitcoin</em> como un título de valor; es un activo intangible no monetario."</p>
+                <div class="firma">— Aaron Olmos, Economista</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONSECUENCIAS PARA EL CIUDADANO - CON FLIP CARDS -->
+    <section class="seccion-oscura">
+        <div class="contenedor">
+            <h2 class="fade-in">Consecuencias explícitas para el ciudadano común</h2>
+            
+            <p class="fade-in">Para el usuario final, especialmente en economías con alta inflación como Venezuela, este debate técnico se traduce en riesgos y beneficios tangibles:</p>
+            
+            <!-- FLIP CARDS CONSECUENCIAS -->
+            <div class="flip-cards-contenedor fade-in">
+                <!-- FLIP CARD 1 - RODOLFO: LIQUIDEZ VS AGENCIAS -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="flip-icon">
+                                <i class="fas fa-exchange-alt"></i>
+                            </div>
+                            <h4>Liquidez vs Calificaciones</h4>
+                            <p>¿Qué prioriza el usuario venezolano?</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4><i class="fas fa-exchange-alt"></i> Liquidez primero</h4>
+                            <p>Me importa más la liquidez y el uso dinámico del <a href="https://www.onesafe.io/es/blog/genio-actuacion-paisaje-cripto" target="_blank" rel="noopener noreferrer">USDT</a> que lo que diga una agencia por falta de datos.</p>
+                            <div class="fuente">— Rodolfo, usuario</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FLIP CARD 2 - PEDRO: HERRAMIENTA DE SUPERVIVENCIA -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="flip-icon">
+                                <i class="fas fa-life-ring"></i>
+                            </div>
+                            <h4>Herramienta de supervivencia</h4>
+                            <p>El USDT en economías hiperinflacionarias</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4><i class="fas fa-life-ring"></i> Supervivencia económica</h4>
+                            <p>Con USDT puedo comprar comida y medicinas sin perder valor.</p>
+                            <div class="fuente">— Pedro, usuario</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FLIP CARD 3 - SEBASTIÁN: SEGURIDAD VS EFICIENCIA -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="flip-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4>Seguridad vs Eficiencia</h4>
+                            <p>El dilema del usuario informado</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4><i class="fas fa-shield-alt"></i> Transparencia deseada</h4>
+                            <p>USDC es más transparente, pero USDT tiene más liquidez y utilidad.</p>
+                            <div class="fuente">— Sebastián Arocha</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CIERRE CON FONDO OSCURO Y LETRAS BLANCAS -->
+    <section class="seccion-blanca">
+        <div class="contenedor">
+            <div class="cierre fade-in">
+                <div class="cierre-contenido">
+                    <p>La rebaja de calificación de <em>Standard & Poor's</em> a USDT revela más sobre la brecha entre los marcos tradicionales de riesgo y la realidad de las finanzas digitales que sobre la solvencia inmediata de la <em>stablecoin</em>. Mientras las agencias debaten cómo calificar el futuro y esperan nuevas regulaciones, millones de usuarios seguirán usando USDT no por ratings, sino por necesidad, funcionalidad y supervivencia económica.</p>
+                    
+                    <div class="veredicto">
+                        <div class="veredicto-item">
+                            <div style="font-size: 2.5rem; margin-bottom: 0.8rem;">⚠️</div>
+                            <h4>Para Wall Street</h4>
+                            <p>Tether tiene un problema técnico medible: su exposición al riesgo (5,6 %) supera sus defensas (3,9 %). El desajuste es real.</p>
+                        </div>
+                        
+                        <div class="veredicto-item">
+                            <div style="font-size: 2.5rem; margin-bottom: 0.8rem;">✓</div>
+                            <h4>Para los usuarios</h4>
+                            <p>El USDT funciona hoy, resuelve problemas reales y es más eficiente que las alternativas tradicionales. Su utilidad práctica es innegable.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- CITA FINAL CON FONDO OSCURO Y LETRAS BLANCAS -->
+                    <div class="cita" style="margin-top: 2.5rem;">
+                        <p>"Para poder regular sobre algo, primero debes entenderlo. Las agencias están en una fase de revisión, definición de términos y comprensión de cómo operan los criptoactivos antes de emitir juicios."</p>
+                        <div class="firma">— Aaron Olmos, Economista</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER - CONTENIDO CON TEXTO JUSTIFICADO -->
+    <footer class="footer">
+        <div class="contenedor">
+            <div style="margin-bottom: 2rem;">
+                <h3 style="color: var(--color-1);">Infografía periodística</h3>
+                <p><strong>Standard & Poor's califica de débil a Tether mientras Fitch y Moody's guardan silencio</strong></p>
+                <p>S&P rebaja calificación de USDT al nivel 5 por riesgo en reservas de Bitcoin, mientras otras agencias no emiten alertas similares</p>
+            </div>
+            
+            <div style="margin-bottom: 2rem;">
+                <p><strong>Por: Natalia Pérez</strong></p>
+                <p style="font-size: 0.9rem; color: var(--color-5);">Caracas, diciembre de 2025</p>
+            </div>
+            
+            <div class="fuentes">
+                <p><strong>Fuentes consultadas:</strong></p>
+                <ul>
+                    <li><em>S&P Global Ratings</em>: Informe de calificación de noviembre de 2025</li>
+                    <li><a href="https://www.criptonoticias.com/mercados/usdt-perder-paridad-dolar-spglobal/" target="_blank" rel="noopener noreferrer">CriptoNoticias: Análisis de S&P sobre USDT</a></li>
+                    <li><a href="https://coinedition.com/es/sp-rebaja-su-ancla-a-debil-mientras-bitcoin-corre-el-riesgo-de-eclipsar-el-colchon-de-seguridad/" target="_blank" rel="noopener noreferrer">CoinEdition: Cobertura de la rebaja de S&P</a></li>
+                    <li><a href="https://www.onesafe.io/es/blog/genio-actuacion-paisaje-cripto" target="_blank" rel="noopener noreferrer">OneSafe: Análisis sobre USDT</a></li>
+                    <li><a href="https://financefeeds.com/es/Ley-Genius%3A-explicaci%C3%B3n-de-las-reglas-y-el-cumplimiento-de-la-ley-de-las-monedas-estables/" target="_blank" rel="noopener noreferrer">FinanceFeeds: Explicación de la Ley Genius</a></li>
+                    <li>Entrevistas exclusivas: Aaron Olmos (economista), Kevin Bravo (analista de riesgos), <strong>Rodolfo</strong>, <strong>Sebastián Arocha</strong> y <strong>Pedro</strong> (usuarios en Venezuela)</li>
+                    <li><a href="https://x.com/paoloardoino/status/1993731485291913649?s=20" target="_blank" rel="noopener noreferrer">X de Paolo Ardoino, CEO de Tether</a></li>
+                </ul>
+            </div>
+            
+            <!-- SECCIÓN FINAL CON TEXTO JUSTIFICADO -->
+            <div class="texto-justificado" style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255, 241, 214, 0.3); font-size: 0.9rem; color: var(--color-5);">
+                <p><strong>Aviso:</strong> Esta infografía es un ejercicio de periodismo de datos y no constituye asesoramiento financiero. Las criptomonedas son activos de alta volatilidad.</p>
+                <p style="margin-top: 1rem; font-style: italic;">Elaborado conforme al Manual de Estilo con especial atención a la claridad del lenguaje, precisión en datos (ej: "5,6 % del 100 %"), uso de cursivas para términos en inglés (<em>Bitcoin</em>, <em>USDT</em>), y enfoque en las consecuencias explícitas para el ciudadano común.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SECCIÓN: HILO DE TWITTER Y POST DE INSTAGRAM -->
+    <section class="redes-sociales">
+        <div class="contenedor">
+            <h2 class="redes-titulo fade-in">Reacciones en redes sociales</h2>
+            
+            <!-- HILO DE TWITTER -->
+            <div class="hilo-twitter fade-in">
+                <!-- TWEET 1: @Cointelegraph -->
+                <div class="tweet">
+                    <div class="tweet-header">
+                        <div class="tweet-avatar">CT</div>
+                        <div class="tweet-user">
+                            <div class="tweet-name">
+                                Cointelegraph
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                            <div class="tweet-handle">@Cointelegraph</div>
+                        </div>
+                    </div>
+                    <div class="tweet-content">
+                        <p><strong>ÚLTIMA HORA:</strong> S&P Global degradó el USDT de Tether a <strong>"5 (débil)"</strong>, la puntuación más baja en su escala de riesgo de stablecoins, citando un aumento de activos de mayor riesgo en sus reservas y persistentes lagunas en la información divulgada.</p>
+                    </div>
+                    <div class="tweet-meta">
+                        <span><i class="far fa-clock"></i> 26 nov 2025</span>
+                        <span><i class="fas fa-retweet"></i> 1.2K</span>
+                        <span><i class="fas fa-heart"></i> 4.5K</span>
+                        <a href="https://x.com/Cointelegraph/status/1993749353668689942?s=20" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Ver en X</a>
+                    </div>
+                </div>
+                
+                <!-- TWEET 2: @paoloardoino -->
+                <div class="tweet">
+                    <div class="tweet-header">
+                        <div class="tweet-avatar">PA</div>
+                        <div class="tweet-user">
+                            <div class="tweet-name">
+                                Paolo Ardoino
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                            <div class="tweet-handle">@paoloardoino</div>
+                        </div>
+                    </div>
+                    <div class="tweet-content">
+                        <p>Tether, en cambio, construyó la primera empresa sobrerrecapitalizada en la industria financiera, sin reservas tóxicas. Y, sin embargo, es y sigue siendo extremadamente rentable. Tether es prueba viva de que el sistema financiero tradicional está tan roto que empieza a ser temido por los emperadores que no tienen ropa.</p>
+                    </div>
+                    <div class="tweet-meta">
+                        <span><i class="far fa-clock"></i> 26 nov 2025</span>
+                        <span><i class="fas fa-retweet"></i> 3.8K</span>
+                        <span><i class="fas fa-heart"></i> 12.4K</span>
+                        <a href="https://x.com/paoloardoino/status/1993731485291913649?s=20" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Ver en X</a>
+                    </div>
+                </div>
+                
+                <!-- TWEET 3: @CoinMarketCap -->
+                <div class="tweet">
+                    <div class="tweet-header">
+                        <div class="tweet-avatar">CM</div>
+                        <div class="tweet-user">
+                            <div class="tweet-name">
+                                CoinMarketCap
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                            <div class="tweet-handle">@CoinMarketCap</div>
+                        </div>
+                    </div>
+                    <div class="tweet-content">
+                        <p><strong>Los factores clave detrás de la rebaja:</strong></p>
+                        <p>⚠️ La exposición de $USDT a "activos de riesgo" como $BTC, oro, bonos corporativos y préstamos ha subido del 17% al 24%<br>
+                        ⚠️ Solo Bitcoin ahora representa ~5.6% de las reservas<br>
+                        ⚠️ Persisten lagunas de divulgación sobre custodios y contrapartes subyacentes<br>
+                        ⚠️ No existe una estructura de reservas completamente segregada.</p>
+                    </div>
+                    <div class="tweet-meta">
+                        <span><i class="far fa-clock"></i> 27 nov 2025</span>
+                        <span><i class="fas fa-retweet"></i> 892</span>
+                        <span><i class="fas fa-heart"></i> 2.1K</span>
+                        <a href="https://x.com/CoinMarketCap/status/1993929051602292854?s=20" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Ver en X</a>
+                    </div>
+                </div>
+                
+                <!-- TWEET 4: @CriptoNoticias -->
+                <div class="tweet">
+                    <div class="tweet-header">
+                        <div class="tweet-avatar">CN</div>
+                        <div class="tweet-user">
+                            <div class="tweet-name">
+                                CriptoNoticias
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                            <div class="tweet-handle">@CriptoNoticias</div>
+                        </div>
+                    </div>
+                    <div class="tweet-content">
+                        <p>La cotización de la stablecoin USDT en Venezuela registra una caída del 40% desde el 7 de enero, regresando a niveles de diciembre de 2025.</p>
+                        <p>⚠️ Este descenso sucede en los mercados P2P y plataformas locales, lo que pudiera estar vinculado con mejores expectativas para la economía nacional.</p>
+                    </div>
+                    <div class="tweet-meta">
+                        <span><i class="far fa-clock"></i> 15 ene 2026</span>
+                        <span><i class="fas fa-retweet"></i> 456</span>
+                        <span><i class="fas fa-heart"></i> 1.2K</span>
+                        <a href="https://x.com/CriptoNoticias/status/2013280605551710565?s=20" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Ver en X</a>
+                    </div>
+                </div>
+                
+                <!-- TWEET 5: @CoinMarketCap (segundo tweet) -->
+                <div class="tweet">
+                    <div class="tweet-header">
+                        <div class="tweet-avatar">CM</div>
+                        <div class="tweet-user">
+                            <div class="tweet-name">
+                                CoinMarketCap
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                            <div class="tweet-handle">@CoinMarketCap</div>
+                        </div>
+                    </div>
+                    <div class="tweet-content">
+                        <p><strong>ÚLTIMO:</strong> ⚡ Tether respondió después de que S&P rebajara la calificación de USDt al nivel más bajo en su escala de estabilidad de stablecoins, con el CEO Paolo Ardoino calificando al sistema financiero tradicional como roto y destacando la sólida situación financiera de la empresa.</p>
+                    </div>
+                    <div class="tweet-meta">
+                        <span><i class="far fa-clock"></i> 27 nov 2025</span>
+                        <span><i class="fas fa-retweet"></i> 567</span>
+                        <span><i class="fas fa-heart"></i> 1.8K</span>
+                        <a href="https://x.com/CoinMarketCap/status/1993929051602292854?s=20" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Ver en X</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- POST DE INSTAGRAM -->
+            <div class="instagram-post fade-in">
+                <div class="instagram-header">
+                    <div class="instagram-avatar">CL</div>
+                    <div class="instagram-user">
+                        <div class="instagram-name">
+                            cryptolab_investement
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="instagram-handle">@cryptolab_investement</div>
+                    </div>
+                </div>
+                <div class="instagram-content">
+                    <div class="instagram-text">
+                        <p>Podemos tener varios tipos de criptomonedas:</p>
+                        <ul>
+                            <li><strong>Bitcoin (BTC):</strong> Descentralizado y seguro. Con alta adopción institucional.</li>
+                            <li><strong>Altcoins:</strong> Ethereum (ETH), Cardano (ADA), Solana (SOL), entre otras. Estas tienen una utilidad y su valor puede estar respaldado por su tecnología y adopción.</li>
+                            <li><strong>Stablecoin:</strong> Tether (USDT), USD Coin (USDC). Son estables, su fluctuación es escasa y están diseñadas para tener paridad 1 a 1 con el dólar.</li>
+                            <li><strong>Meme Coins:</strong> Dogecoin (DOGE), Pepe Coin (PEPE), entre otras. Son muy volátiles y su valor está en la pura especulación. No tienen una utilidad de valor.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="instagram-footer">
+                    <span><i class="far fa-heart"></i> 2,345 likes</span>
+                    <span><i class="far fa-comment"></i> 89 comments</span>
+                    <a href="https://www.instagram.com/p/DRNgUKJEbQG/?utm_source=ig_web_copy_link" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Ver en Instagram</a>
+                </div>
+            </div>
+            
+            <div class="redes-creditos">
+                <p>Recopilación de reacciones de la comunidad cripto tras la rebaja de S&P Global Ratings.</p>
+                <p>© 2026 - Infografía periodística</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animación de aparición de elementos
+            const elementos = document.querySelectorAll('.fade-in');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        
+                        // Animación específica para las barras del gráfico
+                        if (entry.target.classList.contains('grafico-contenedor')) {
+                            setTimeout(() => {
+                                // ALTURAS PROPORCIONALES CORREGIDAS
+                                // Contenedor: 200px
+                                // 5.6% → 112px (56% de 200px)
+                                // 3.9% → 78px (39% de 200px)
+                                document.getElementById('barra-btc').style.height = '112px';
+                                document.getElementById('barra-colchon').style.height = '78px';
+                            }, 300);
+                        }
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            elementos.forEach(el => observer.observe(el));
+            
+            // Animación de las barras al cargar la página si ya están visibles
+            setTimeout(() => {
+                const grafico = document.querySelector('.grafico-contenedor');
+                if (grafico && window.getComputedStyle(grafico).opacity === '1') {
+                    document.getElementById('barra-btc').style.height = '112px';
+                    document.getElementById('barra-colchon').style.height = '78px';
+                }
+            }, 500);
+        });
+    </script>
+</body>
+</html>
